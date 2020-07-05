@@ -1,12 +1,12 @@
-import axios from 'axios'
-import fetchData from './fetch'
-import { Node } from './nodes'
-import { capitalize } from 'lodash'
-import normalize from './normalize'
-import authentication from './authentication'
+const axios = require('axios')
+const { capitalize } = require('lodash')
+const fetchData = require('./fetch')
+const { Node } = require('./nodes')
+const normalize = require('./normalize')
+const authentication = require('./authentication')
 
 exports.sourceNodes = async (
-  { store, actions, cache, reporter, getNode, getNodes },
+  { store, actions, cache, reporter, getNode, getNodes, createNodeId },
   {
     apiURL = 'http://localhost:1337',
     contentTypes = [],
@@ -60,6 +60,7 @@ exports.sourceNodes = async (
     store,
     cache,
     createNode,
+    createNodeId,
     touchNode,
     jwtToken,
     options: {

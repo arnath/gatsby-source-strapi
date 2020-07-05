@@ -1,4 +1,4 @@
-import axios from 'axios'
+const axios = require('axios')
 
 module.exports = async ({ loginData, reporter, apiURL }) => {
   let jwtToken = null

@@ -19,6 +19,7 @@ const extractFields = async (
   store,
   cache,
   createNode,
+  createNodeId,
   touchNode,
   auth,
   item,
@@ -40,6 +41,7 @@ const extractFields = async (
             store,
             cache,
             createNode,
+            createNodeId,
             touchNode,
             auth,
             f,
@@ -75,6 +77,7 @@ const extractFields = async (
               store,
               cache,
               createNode,
+              createNodeId,
               auth,
             })
 
@@ -100,6 +103,7 @@ const extractFields = async (
           store,
           cache,
           createNode,
+          createNodeId,
           touchNode,
           auth,
           field,
@@ -142,6 +146,7 @@ const extractFields = async (
                   store,
                   cache,
                   createNode,
+                  createNodeId,
                   auth,
                 })
 
@@ -156,6 +161,7 @@ const extractFields = async (
                   })
                 }
               } catch (e) {
+                console.log(e);
                 // Ignore
               }
             }
@@ -184,6 +190,7 @@ exports.downloadMediaFiles = async ({
   store,
   cache,
   createNode,
+  createNodeId,
   touchNode,
   jwtToken: auth,
   options,
@@ -199,6 +206,7 @@ exports.downloadMediaFiles = async ({
           store,
           cache,
           createNode,
+          createNodeId,
           touchNode,
           auth,
           item,
